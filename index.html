@@ -20,6 +20,16 @@
 </head>
 
 <body>
+    <!-- SITE PRELOADER -->
+    <div id="sitePreloader">
+        <div class="preloader-content">
+            <img src="assets/images/logo/logo.png" alt="Logo" class="preloader-logo">
+            <div class="preloader-line"></div>
+            <p class="text-dark fs-2">Powering a Brighter Tomorrow</p>
+        </div>
+    </div>
+
+
 
     <!-- ===== HEADER / NAVBAR ===== -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar">
@@ -93,12 +103,52 @@
                             world-class,
                             innovative, cost-effective, and reliable solar solutions.</p>
                         <div class="hero-buttons">
-                            <a href="#contact" class="btn btn-warning btn-lg me-3">Get Started</a>
+                            <a href="#contact" class="btn btn-warning btn-lg me-3 mb-3">Get Started</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
+                    <div class="card hero-form-card shadow-lg">
+                        <div class="card-body">
+
+                            <h5 class="fw-bold mt-3 mb-4 text-dark">Check Your Eligibility</h5>
+
+                            <!-- STEP 1 -->
+                            <div class="form-step active">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Full Name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="tel" class="form-control" placeholder="Mobile Number">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- STEP 2 -->
+                            <div class="form-step">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="City">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="number" class="form-control"
+                                            placeholder="Monthly Electricity Bill">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- BUTTON -->
+                            <div class="text-center mt-4">
+                                <button class="btn btn-warning px-4" id="nextBtn">
+                                    Next →
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -169,32 +219,39 @@
         <div class="quote-pattern"></div>
 
         <div class="container position-relative ">
-            <div class="row align-items-center justify-content-center g-4">
+            <span class="quote-mark start">“</span>
+            <div class="quote-body">
+                <div class="row align-items-center justify-content-center g-4">
 
-                <!-- LEFT : MODI IMAGE (30%) -->
-                <div class="col-lg-4 text-center">
-                    <div class="modi-image-wrapper">
-                        <img src="assets/images/modi.jpg" alt="Shri Narendra Modi" class="img-fluid modi-image">
+                    <!-- LEFT : MODI IMAGE (30%) -->
+                    <div class="col-lg-4 text-center">
+                        <div class="modi-image-wrapper">
+                            <img src="assets/images/modi.png" alt="Shri Narendra Modi" class="img-fluid modi-image">
+                        </div>
                     </div>
-                </div>
 
-                <!-- RIGHT : QUOTE CONTENT (70%) -->
-                <div class="col-lg-8">
-                    <div class="quote-content">
+                    <!-- RIGHT : QUOTE CONTENT (70%) -->
+                    <div class="col-lg-8">
+                        <div class="quote-card">
 
-                        <!-- Quote Text -->
-                        <blockquote class="quote-text">
-                            In order to further sustainable development and people's well-being, we are launching the
-                            <strong>PM Surya Ghar: Muft Bijli Yojana</strong>.
-                            This project, with an investment of over ₹75,000 crores, aims to light up 1 crore households
-                            by providing up to 300 units of free electricity every month.
-                        </blockquote>
+                            <p class="quote-text text-dark fs-4">
+                                In order to further sustainable development and people's well-being, we are launching
+                                the
+                                <strong>PM Surya Ghar: Muft Bijli Yojana</strong>.
+                                This project, with an investment of over ₹75,000 crores, aims to light up 1 crore
+                                households
+                                by providing up to 300 units of free electricity every month.
+                            </p>
 
-                        <!-- Author -->
-                        <p class="quote-author">
-                            – Shri Narendra Modi, Hon'ble Prime Minister of India
-                        </p>
+                            <p class="quote-author text-dark fs-6">
+                                – Shri Narendra Modi, Hon'ble Prime Minister of India
+                            </p>
+                        </div>
+
+                        <span class="quote-mark end">”</span>
                     </div>
+
+
                 </div>
 
             </div>
@@ -302,18 +359,18 @@
 
                 <!-- TEXT CONTENT -->
                 <div class="col-md-6 text-md-start">
-                    <h2 class="fw-bold mb-3 fs-1">
+                    <h2 class="fw-bold mb-3 fs-3">
                         10 Years Comprehensive Warranty
                     </h2>
-                    <p class="fs-4 mb-4">
+                    <p class="fs-5 mb-4">
                         Peace of mind with long-term protection and reliability.
                     </p>
 
                     <div class="d-flex justify-content-center justify-content-md-start align-items-center gap-3">
-                        <i class="bi bi-wifi fs-1"></i>
+                        <i class="bi bi-wifi fs-3"></i>
                         <div>
-                            <p class="fw-semibold mb-0 fs-1">USB / Wi-Fi / RS485</p>
-                            <p class="fs-4 mb-4">
+                            <p class="fw-semibold mb-0 fs-3">USB / Wi-Fi / RS485</p>
+                            <p class="fs-5 mb-4">
                                 Remote monitoring & flexible configuration
                             </p>
                         </div>
@@ -811,6 +868,7 @@
             </div>
 
             <!-- ROW START -->
+
             <div class="row g-5 align-items-start">
 
                 <!-- LEFT : FAQ (START ALIGNED) -->
@@ -986,7 +1044,7 @@
                     <div class="border border-2 border-success p-3">
                         <img src="./assets/images/logo/logo.png" alt="Marvel Batteries" height="60" class="mb-3">
 
-                        <p class="fs-5">
+                        <p class="fs-6">
                             Authorized Distributor of Microtek. Leading solar power service provider.
                         </p>
                     </div>
@@ -998,15 +1056,15 @@
 
                     <!-- LOCATION ROW 1 -->
                     <div class="footer-location-block mb-4 border border-2 border-success p-3">
-                        <p class=" mb-1 fw-semibold fs-5">
+                        <p class=" mb-1 fs-6">
                             <i class="bi bi-geo-alt-fill me-2"></i>
                             55A, NSR Road, Saibaba Colony, Coimbatore – 11
                         </p>
-                        <p class="mb-1 fs-5">
+                        <p class="mb-1 fs-6">
                             <i class="bi bi-envelope-fill me-2"></i>
                             info@marvelbatteries.com
                         </p>
-                        <p class="mb-0 fs-5">
+                        <p class="mb-0 fs-6">
                             <i class="bi bi-telephone-fill me-2"></i>
                             +91 98765 43210
                         </p>
@@ -1014,15 +1072,15 @@
 
                     <!-- LOCATION ROW 2 -->
                     <div class="footer-location-block border border-2 border-success p-3">
-                        <p class="mb-1 fw-semibold fs-5 ">
+                        <p class="mb-1  fs-6 ">
                             <i class="bi bi-geo-alt-fill me-2"></i>
                             No.282/A-1, P.N.Pudur, Vadavalli, Coimbatore – 41
                         </p>
-                        <p class="mb-1 fs-5 ">
+                        <p class="mb-1 fs-6 ">
                             <i class="bi bi-envelope-fill me-2"></i>
                             support@marvelbatteries.com
                         </p>
-                        <p class="mb-0 fs-5">
+                        <p class="mb-0 fs-6">
                             <i class="bi bi-telephone-fill me-2"></i>
                             +91 91234 56789
                         </p>
@@ -1033,7 +1091,7 @@
                 <div class="col-md-4 col-12 text-center text-white ">
                     <h2 class="fs-4 text-center mb-4 mt-3">Follow Us </h2>
                     <div class="border border-2 border-success p-3">
-                        <p class="fs-4 mb-3">
+                        <p class="fs-6 mb-3">
                             Stay connected with us for the latest updates,<br>
                             solar insights, service announcements,<br>
                             and company news.
@@ -1069,7 +1127,7 @@
             <!-- BOTTOM BAR -->
             <div class="row text-white align-items-center">
                 <div class="col-md-6 col-12 text-center text-md-start">
-                    <p class="mb-0 fs-4">
+                    <p class="mb-0 fs-6">
                         &copy;2026. Marvel Batteries. All Rights Reserved.
                     </p>
                 </div>
@@ -1086,12 +1144,30 @@
     </footer>
 
 
+    <!-- SUCCESS POPUP -->
+    <div class="success-popup" id="successPopup">
+        <div class="success-card">
+            <div class="checkmark">
+                <svg viewBox="-1 0 55 52">
+                    <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none" />
+                    <path class="checkmark-check" fill="none" d="M14 27l7 7 17-17" />
+                </svg>
+            </div>
+            <h5>Submitted Successfully</h5>
+            <p>Our team will contact you shortly</p>
+            <button class="btn btn-success btn-sm mt-3" onclick="closePopup()">OK</button>
+        </div>
+    </div>
+
+
+
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
     <script src="./main.js"></script>
+    <script src="./script.js"></script>
     <script>
         document.querySelectorAll('.offcanvas a[href^="#"]').forEach(link => {
             link.addEventListener('click', function (e) {
@@ -1120,6 +1196,22 @@
             });
         });
     </script>
+    <script>
+        window.addEventListener("load", () => {
+            const preloader = document.getElementById("sitePreloader");
+
+            setTimeout(() => {
+                preloader.classList.add("hide");
+
+                setTimeout(() => {
+                    preloader.style.display = "none";
+                }, 900);
+
+            }, 1000);
+        });
+    </script>
+
+
 
 
 </body>

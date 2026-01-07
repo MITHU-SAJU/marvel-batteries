@@ -19,7 +19,8 @@
         "ignore": [
           "text-justify",
           "text-justify: inter-word",
-          "text-align-last"
+          "text-align-last",
+          "backdrop-filter"
         ]
       }
     ],
