@@ -768,20 +768,7 @@ section {
   will-change: transform, opacity;
 }
 
-/* ===== QUOTE SECTION ===== */
-.quote-section {
-  background: linear-gradient(135deg, #16a34a, #2563eb);
-  padding: 100px 0;
-}
 
-/* BACKGROUND PATTERN */
-.quote-pattern {
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
-  background-size: 60px 60px;
-  opacity: 0.2;
-}
 
 /* MODI IMAGE */
 .modi-image-wrapper {
@@ -793,34 +780,9 @@ section {
     max-width: 200px;
     border-radius: 0px;
     margin-left: 10%;
+    margin-top: -2rem;
 }
 
-/* QUOTE CONTENT */
-.quote-content {
-  padding-left: 10px;
-}
-
-/* QUOTE MARK */
-.quote-mark {
-  font-size: 80px;
-  color: #facc15;
-  line-height: 1;
-  margin-bottom: 15px;
-}
-
-/* QUOTE TEXT */
-.quote-text {
-  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
-  line-height: 1.8;
-  font-style: italic;
-  margin-bottom: 25px;
-}
-
-/* AUTHOR */
-.quote-author {
-  font-size: 1.1rem;
-  font-weight: 700;
-}
 
 /* ===== SECTION ===== */
 
@@ -1435,3 +1397,6 @@ section {
     0% { left: -40%; }
     100% { left: 100%; }
 }
+
+
+
