@@ -20,7 +20,8 @@
           "text-justify",
           "text-justify: inter-word",
           "text-align-last",
-          "backdrop-filter"
+          "backdrop-filter",
+          "min-height: auto"
         ]
       }
     ],

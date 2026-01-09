@@ -90,6 +90,47 @@ section {
   padding: 12px 0;
 }
 
+.top-icon {
+    width: 40px;
+    height: 30px;
+    margin-right: 8px;
+    object-fit: contain;
+}
+
+
+/* ===== TOP STRIP ===== */
+.top-strip {
+    background-color:#198754; /* or dark color */
+    color: #fff;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    z-index: 1051; /* above navbar */
+}
+
+.top-strip .top-left,
+.top-strip .top-right {
+    white-space: nowrap;
+}
+
+/* ===== NAVBAR OFFSET ===== */
+.navbar-offset {
+    margin-top: 40px; /* same as top strip height */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 576px) {
+    .top-strip {
+        font-size: 12px;
+        height: 35px;
+        line-height: 35px;
+    }
+    .navbar-offset {
+        margin-top: 35px;
+    }
+}
+
+
 
 /* ================= MOBILE SIDEBAR ================= */
 .mobile-sidebar {
@@ -124,6 +165,7 @@ section {
 
 /* Header */
 .mobile-sidebar .offcanvas-header {
+  margin-top: 1rem;
     padding: 20px 20px 10px;
     border-bottom: 1px solid rgba(0,0,0,0.06);
 }
@@ -222,49 +264,107 @@ section {
   color: #16a34a !important;
 }
 
-/* Hero Section */
+/* ===== HERO SECTION ===== */
 .hero-section {
-  padding: 150px 0 100px;
-  background: linear-gradient(135deg, #e8f5e9 0%, #fff3e0 100%);
-  position: relative;
-  overflow: hidden;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;            /* vertical center */
+    justify-content: center;        /* horizontal center */
+
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("./assets/images/banner.png") center / cover no-repeat;
+
+    padding: 120px 15px 60px;       /* prevents navbar overlap */
+    box-sizing: border-box;
 }
 
-.hero-section::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  right: -10%;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(243, 156, 18, 0.1) 0%, transparent 70%);
-  border-radius: 50%;
+/* Container full height support */
+.hero-section .container {
+    width: 100%;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
+/* Row alignment */
+.hero-section .row {
+    align-items: center;
 }
 
+/* Text spacing safety */
 .hero-content h1 {
-  font-size: 3.5rem;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
+    line-height: 1.2;
 }
 
-.hero-content .text-primary {
-  color: var(--primary-color) !important;
+.hero-content p {
+    max-width: 600px;
 }
 
-
-.hero-image {
-  position: relative;
+/* Card responsiveness */
+.hero-form-card {
+    max-width: 480px;
+    margin-left: auto;
 }
 
-.hero-image img {
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+/* ---------- TABLET (≤ 991px) ---------- */
+@media (max-width: 991px) {
+
+    .hero-section {
+        padding-top: 140px;
+    }
+
+    .hero-content {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-form-card {
+        margin: 0 auto;
+    }
 }
+
+/* ---------- MOBILE (≤ 576px) ---------- */
+@media (max-width: 576px) {
+
+    .hero-section {
+        min-height: auto;
+        padding: 130px 15px 50px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2rem, 6vw, 2.5rem);
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-form-card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* ---------- LARGE SCREENS (≥ 1400px) ---------- */
+@media (min-width: 1400px) {
+
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+
+    .hero-content p {
+        font-size: 1.25rem;
+    }
+
+    .hero-form-card {
+        max-width: 520px;
+    }
+}
+
 
 
 /* FLOAT EFFECT */
@@ -1040,140 +1140,136 @@ section {
 
 
 
-
-
-/* ================= FOOTER ================= */
+/* =========================
+   FOOTER BASE
+========================= */
 .footer {
-  background: #2c3e50 !important;
-  padding: 60px 0 30px;
-  border-top: 1px solid #e5e7eb;
-  color: #eff6ff;
+    background-color: #111;
+    width: 100%;
+    overflow-x: hidden;
 }
-
-
-.footer-links a:hover {
-  color: #22c55e;
-  padding-left: 4px;
-}
-
 
 .footer h5 {
-  color: var(--white);
-  margin-bottom: 1.5rem;
-  font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    white-space: nowrap;
 }
 
+/* =========================
+   TEXT BLOCKS
+========================= */
+.footer-text {
+    max-width: 340px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    text-align: left;
+    word-break: break-word;
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
 .social-links {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-
-.footer-links {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-links li {
-  margin-bottom: 0.7rem;
-}
-
-.footer-links a {
-  color: #bdc3c7;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: var(--primary-color);
-}
-
-/* ================= FOOTER MOBILE ALIGNMENT FIX ================= */
-@media (max-width: 575.98px) {
-
-    .footer {
-        text-align: left;
-    }
-
-    .footer .row {
-        text-align: left;
-    }
-
-    .footer .d-flex {
-        align-items: flex-start !important;
-    }
-
-    .footer img {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-
-    .footer-location {
-        text-align: left;
-    }
-
-    .footer-links {
-        text-align: left;
-        padding-left: 0;
-    }
-
-    .footer-links a {
-        text-align: left;
-    }
-}
-/* ================= SOCIAL LINKS ================= */
-.social-links {
-    margin-top: 10px;
-}
-
-.social-icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.08);
-    color: #fff;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    font-size: 1.2rem;
-    text-decoration: none;
-
-    transition: all 0.3s ease;
+    flex-wrap: wrap;
 }
 
-/* Hover colors */
-.social-icon.facebook:hover {
-    background: #1877f2;
+.social-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 18px;
+    transition: transform 0.3s ease,
+                background-color 0.3s ease,
+                color 0.3s ease;
 }
 
-.social-icon.instagram:hover {
-    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
-}
-
-.social-icon.twitter:hover {
-    background: #000;
-}
-
-.social-icon.linkedin:hover {
-    background: #0a66c2;
-}
-
-/* Lift effect */
 .social-icon:hover {
-    transform: translateY(-3px);
+    background-color: #f9b233;
+    color: #000;
+    transform: translateY(-4px);
 }
 
-/* Mobile tweak */
-@media (max-width: 575.98px) {
-    .social-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 1.1rem;
+/* =========================
+   RESPONSIVE BREAKPOINTS
+========================= */
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .footer-text {
+        max-width: 360px;
+        font-size: 1rem;
     }
 }
+
+/* Tablets */
+@media (max-width: 991px) {
+    .footer {
+        text-align: center;
+    }
+
+    .footer-text {
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 767px) {
+    .footer h5 {
+        text-align: center;
+    }
+
+    .footer-text {
+        text-align: center;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .social-links {
+        justify-content: center;
+        gap: 12px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .social-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+    }
+
+    .footer-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* =========================
+   CROSS-BROWSER FIXES
+========================= */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+i {
+    line-height: 1;
+}
+
+
 /* ===== QUOTE SECTION BORDER ===== */
 .quote-section {
     position: relative;
